@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class mssms extends Controller
 {
     public function conexion(){
-        $serverName="LAPTOP-HCJ89HJ8\SQLEXPRESS";
+        $serverName="LAPTOP-IVQI9S1A\SQLEXPRESS";
         $_POST['servern']=$serverName;
 
         $Database="Muebleria";
@@ -25,10 +25,10 @@ class mssms extends Controller
         $query="SELECT [id] ,[clasificacion]FROM [dbo].[clasificacion]";
         $_POST['query']=$query;
 
-        $queryArl="SELECT [id], [precio], [idMedida], [IdClasificacion] FROM [dbo].[articulo]";
+        $queryArl="SELECT [id], [nombreArticulo], [precio], [idMedida], [IdClasificacion] FROM [dbo].[articulo]";
         $_POST['queryArl']=$queryArl;
 
-        $queryArlinf="SELECT [id], [precio], [idMedida], [IdClasificacion] FROM [dbo].[articulo] WHERE [id]=";
+        $queryArlinf="SELECT [id], [nombreArticulo],[precio], [idMedida], [IdClasificacion] FROM [dbo].[articulo] WHERE [id]=";
         $_POST['queryArlinf']=$queryArlinf;
 
         $queryVw="SELECT dbo.medida.alto, dbo.medida.largo, dbo.medida.ancho FROM dbo.articulo INNER JOIN dbo.medida ON dbo.articulo.idMedida = dbo.medida.id WHERE dbo.articulo.id = ";

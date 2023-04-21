@@ -34,6 +34,15 @@
                         <input name="precio" id="precio"type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div>
+                        Foto
+                        <select name="foto" id=""><option value="cocina">Cocina</option>
+                            <option value="recamara">Recamara</option>
+                            <option value="baño">Baño</option>
+                            <option value="patio">Patio</option>
+                            <option value="sala">Sala</option></select>
+                            
+                    </div>
+                    <div><br>
                         Clasificacion
                         <select name="clasif" id="clasif">
                             @while ($datos=sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC))
@@ -41,7 +50,7 @@
                             @endwhile
                         </select>
                     </div>
-                    <div>
+                    <div><br>
                         <span class="input-group-text" id="inputGroup-sizing-default">Alto</span>
                         <input  name="alto" id="alto"type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>@csrf
@@ -101,7 +110,11 @@
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default">Articulo</span>
-                        <input name="articulo" id="articulo"type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        @if(isset($_GET['idArl']))
+                            <input name="articulo" id="articulo"type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="<?php echo $datos3['nombreArticulo']?>">
+                        @else
+                            <input name="articulo" id="articulo"type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        @endif
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default">Precio</span>
@@ -111,6 +124,18 @@
                             <input name="precio" id="precio" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="">
                         @endif
                     </div>
+                    
+                    <div>
+                        Foto
+                        <select name="foto" id=""><option value="cocina">Cocina</option>
+                            <option value="recamara">Recamara</option>
+                            <option value="baño">Baño</option>
+                            <option value="patio">Patio</option>
+                            <option value="sala">Sala</option></select>
+                            
+                    </div>
+                    <div><br>
+
                     <div>
                         Clasificacion
                         <select name="clasif" id="clasif">
@@ -119,7 +144,7 @@
                             @endwhile
                         </select>
                     </div>
-                    <div>
+                    <div><br>
                         <span class="input-group-text" id="inputGroup-sizing-default">Alto</span>
                         @if(isset($_GET['idArl']))
                             <input  name="alto" id="alto"type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="<?php echo $datos2['alto']?>">

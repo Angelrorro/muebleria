@@ -21,6 +21,7 @@ class WsCrudArticulo extends Controller
         $alto=$req->get('alto');
         $largo=$req->get('largo');
         $ancho=$req->get('ancho');
+        $foto=$req->get('foto');
         switch($var){
             case '1':
                 $sol="SELECT [id] FROM [dbo].[medida]WHERE [alto]=$alto AND [largo]=$largo AND [ancho]=$ancho";
@@ -45,7 +46,7 @@ class WsCrudArticulo extends Controller
                         $wsd_url="http://localhost/CrudArticulo/CrudArticulo.asmx?WSDL";
                         $client=new SoapClient($wsd_url);
                         $paramsCreate=array(
-                            'articulo'=>$articulo, 'precio'=>$precio, 'medidas'=>$idMed, 'clasif'=>$clasif
+                            'articulo'=>$articulo, 'precio'=>$precio, 'foto'=>$foto, 'medidas'=>$idMed, 'clasif'=>$clasif
                         );
                         $return=$client->CreateArticulo($paramsCreate);
                     }catch(Exception $e){
@@ -76,7 +77,7 @@ class WsCrudArticulo extends Controller
                         $wsd_url="http://localhost/CrudArticulo/CrudArticulo.asmx?WSDL";
                         $client=new SoapClient($wsd_url);
                         $paramsUpdate=array(
-                            'precio'    =>$precio, 'medidas'=>$idMed, 'clasif'=>$clasif, 'id'=>$idArl
+                            'articulo'=>$articulo , 'precio'=>$precio, 'foto'=>$foto,  'medidas'=>$idMed, 'clasif'=>$clasif, 'id'=>$idArl
                         );
                         $return=$client->UpdateArticulo($paramsUpdate);
                     }catch(Exception $e){

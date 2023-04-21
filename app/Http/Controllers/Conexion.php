@@ -1,6 +1,6 @@
 <?php
     header('Content-Type: text/html; charset=UTF-8');
-        $serverName="LAPTOP-HCJ89HJ8\SQLEXPRESS";
+        $serverName="LAPTOP-IVQI9S1A\SQLEXPRESS";
         $connectionInfo=array("Database"=>"Muebleria", "UID"=>"sa", "PWD"=>"aaa");
         $query="SELECT [id] ,[clasificacion] FROM [dbo].[clasificacion]";
         $con=sqlsrv_connect($serverName,$connectionInfo);

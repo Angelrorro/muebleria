@@ -12,7 +12,7 @@
                 <a href="/"><h1 class="text-3xl font-black">Muebleria</h1></a>
                 @auth
                     <nav class="flex gap-5">
-                        <a class="font-bold text-gray-600 text-sm" href="{{route('login')}}">Hola: <span class="font-normal">{{ auth()->user()->username }}</span></a>
+                        <a class="font-bold text-gray-600 text-sm" href="{{route('login')}}">Hola: <span class="font-normal">{{ auth()->user()->email }}</span></a>
                         <form action="{{route('logout')}}" method="POST">
                             @csrf
                             <button type="submit" class="font-bold uppercase text-gray-600 text-sm">Cerrar sesión</button>

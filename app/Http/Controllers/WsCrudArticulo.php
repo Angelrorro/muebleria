@@ -45,7 +45,7 @@ class WsCrudArticulo extends Controller
                         $wsd_url="http://localhost/CrudArticulo/CrudArticulo.asmx?WSDL";
                         $client=new SoapClient($wsd_url);
                         $paramsCreate=array(
-                            'precio'=>$precio, 'medidas'=>$idMed, 'clasif'=>$clasif
+                            'articulo'=>$articulo, 'precio'=>$precio, 'medidas'=>$idMed, 'clasif'=>$clasif
                         );
                         $return=$client->CreateArticulo($paramsCreate);
                     }catch(Exception $e){

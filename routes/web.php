@@ -1,12 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\WsCrudArticulo;
 use App\Http\Controllers\mssms;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegisterController;
+=======
+use App\Http\Controllers\ListadoController;
+>>>>>>> rammarco
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +23,7 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
+<<<<<<< HEAD
 
 
 Route::get('/articulo', [App\Http\Controllers\mssms::class, 'conexion'])->name('articulo');

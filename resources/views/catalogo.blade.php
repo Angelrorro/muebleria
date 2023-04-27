@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('cartas')
 
 @section('titulo')
     Catalogo de Muebleria

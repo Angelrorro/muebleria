@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 class PostController extends Controller {
 
     public function __construct() {
@@ -11,6 +11,7 @@ class PostController extends Controller {
     }
 
     public function index() {
-        return view('layouts.dashboard');
+        $query=DB::table('dbo.articulo')->get();
+        return view('header').view ('cartas',['listado'=>$query]);
     }
 }

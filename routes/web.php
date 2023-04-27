@@ -7,7 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegisterController;
-
+use App\Http\Controllers\ListadoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,10 +22,11 @@ use App\Http\Controllers\RegisterController;
 
 
 
+Route::get('/cartas',[ListadoController::class,'cartas'])->name('cartas');
 Route::get('/articulo', [App\Http\Controllers\mssms::class, 'conexion'])->name('articulo');
 
 
-Route::post('/articulo', [App\Http\Controllers\WsCrudArticulo::class, 'store'])->name('articulo');
+Route::post('/articulo', [App\Http\Controllers\WsCrudArticulo::class, 'store']);
 
 Route::get('/', function () {
     return view('catalogo');

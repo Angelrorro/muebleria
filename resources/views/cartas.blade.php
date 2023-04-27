@@ -14,9 +14,11 @@
         align-items: center;
     }
     </style>
+    
 </head>
 <body>
 <br>
+
 <div class="row borde">
     @foreach($listado as $li)
     <section class="col-lg-4 ">

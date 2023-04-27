@@ -34,6 +34,6 @@ class mssms extends Controller
         $queryVw="SELECT dbo.medida.alto, dbo.medida.largo, dbo.medida.ancho FROM dbo.articulo INNER JOIN dbo.medida ON dbo.articulo.idMedida = dbo.medida.id WHERE dbo.articulo.id = ";
         $_POST['queryVw']=$queryVw;
 
-        return view('articulo', compact('serverName', 'Database','UID','PWD', 'query','queryArl', 'queryArlinf', 'queryVw'));
+        return view('header').view('articulo', compact('serverName', 'Database','UID','PWD', 'query','queryArl', 'queryArlinf', 'queryVw'));
     }
 }

@@ -16,6 +16,9 @@
     ?>
 </head>
 <body>
+    
+<div class="row borde">
+<section class="col-lg-4 ">
     <div class="grid">
     <div class="card"  style="width: 24rem; margin: 2rem auto;">
         <div class="card-body" align="center">
@@ -69,6 +72,8 @@
             </div>
         </div>
     </div>
+    </section>
+    <section class="col-lg-4 ">
     <div>
         <div class="card"  style="width: 24rem; margin: 2rem auto;">
             <div class="card-body" align="center">
@@ -175,6 +180,8 @@
             </div>
         </div>
     </div>
+    </section>
+    <section class="col-lg-4 ">
     <div>
         <div class="card" style="width: 24rem; margin: 2rem auto;">
             <div class="card-body"align="center">
@@ -202,5 +209,7 @@
         </div>
     </div>
     <div>
+    </section>
+</div>
 </body>
 </html>

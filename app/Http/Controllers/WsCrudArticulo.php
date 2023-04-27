@@ -126,6 +126,6 @@ class WsCrudArticulo extends Controller
         $queryArl=$_POST['queryArl'];
         $queryArlinf=$_POST['queryArlinf'];
         $queryVw=$_POST['queryVw'];
-        return view('articulo', compact('serverName', 'Database','UID','PWD', 'query','queryArl', 'queryArlinf', 'queryVw'));
+        return view('header').view('articulo', compact('serverName', 'Database','UID','PWD', 'query','queryArl', 'queryArlinf', 'queryVw'));
     }
 }

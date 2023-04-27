@@ -22,10 +22,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent" text-color="#FFFFFF">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a  class="navbar-brand" style="color: white" href="">login</a></a>
+            <a  class="navbar-brand" style="color: white" href="{{route('articulo')}}">CRUD</a></a>
           </li>
             <li class="nav-item">
-            <a  class="navbar-brand" style="color: white" href="">Menu</a></a>
+            <a  class="navbar-brand" style="color: white" href="{{route('cartas')}}">Menu</a></a>
           </li>
           
           </li>
@@ -35,7 +35,10 @@
               <input class="form-control me-2" type="search" placeholder="Buscar por nombre" aria-label="Buscar">
             </form>
             <button class="btn btn-primary" type="button">
-              <a  class="" style="color: white" href="">Login</a>
+              <a  class="" style="color: white" href="{{route('login')}}">Login</a>
+            </button>
+            <button class="btn btn-primary" type="button">
+              <a  class="" style="color: white" href="{{route('crear-cuenta')}}">Crear Cuenta</a>
             </button>
         </div>
       </a>
